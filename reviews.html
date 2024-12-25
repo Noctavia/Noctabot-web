@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Système de Revue Produit</title>
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Commentaires et Avis</h1>
+            <p>Consultez les avis des utilisateurs et ajoutez le vôtre</p>
+        </div>
+    </header>
+
+    <section class="reviews-section">
+        <div class="review-container">
+
+            <!-- Formulaire pour soumettre un avis -->
+            <div class="review-form">
+                <h2>Ajoutez un Avis</h2>
+                <form action="#" id="reviewForm">
+                    <div class="review-rating">
+                        <label for="rating">Votre note :</label>
+                        <div class="star-rating" id="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                    </div>
+                    <div class="review-input">
+                        <label for="reviewText">Votre avis :</label>
+                        <textarea id="reviewText" name="reviewText" required placeholder="Exprimez-vous ici..."></textarea>
+                    </div>
+                    <div class="review-author">
+                        <label for="reviewAuthor">Nom :</label>
+                        <input type="text" id="reviewAuthor" name="reviewAuthor" required placeholder="Votre nom">
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit">Soumettre mon avis</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Liste des avis -->
+            <div class="reviews-list">
+                <h2>Avis des Utilisateurs</h2>
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author">John Doe</div>
+                        <div class="review-date">Le 20 Décembre 2024</div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="review-text">
+                        <p>C'était un excellent produit ! Je recommande vivement.</p>
+                    </div>
+                </div>
+
+                <!-- Exemple d'avis supplémentaire -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author">Alice Dupont</div>
+                        <div class="review-date">Le 19 Décembre 2024</div>
+                    </div>
+                    <div class="review-rating">
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                    </div>
+                    <div class="review-text">
+                        <p>Un produit exceptionnel qui vaut son prix. Très satisfait de mon achat !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 NoctaBot - Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

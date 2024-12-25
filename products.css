@@ -1,0 +1,262 @@
+* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Conteneur principal des produits */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 20px;
+}
+
+/* Titre principal */
+.product-container h2 {
+    font-size: 3rem;
+    color: #00ff99;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(0, 255, 153, 0.6);
+}
+
+/* Description des produits */
+.product-container .description {
+    font-size: 1.3rem;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Conteneur des cartes de prix */
+.pricing-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Carte de prix */
+.pricing-card {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    max-width: 350px;
+    flex-grow: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Animation au survol de la carte */
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 255, 153, 0.3);
+}
+
+/* Titre de la carte */
+.pricing-card h3 {
+    font-size: 2rem;
+    color: #00ff99;
+    margin-bottom: 15px;
+}
+
+/* Prix de la carte */
+.pricing-card .price {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Période de facturation */
+.pricing-card .billing-period {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* Bouton S'abonner */
+.subscribe-btn {
+    padding: 12px 28px;
+    background-color: #00ff99;
+    color: #111;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+.subscribe-btn:hover {
+    background-color: #00e5c4;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 255, 153, 0.3);
+}
+
+/* Effet au clic du bouton */
+.subscribe-btn:active {
+    background-color: #00bfa3;
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(0, 255, 153, 0.2);
+}
+
+/* Section des avis */
+.review-section {
+    padding: 60px 20px;
+    background-color: #222;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.review-section h3 {
+    font-size: 2.5rem;
+    color: #00ff99;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Conteneur des avis */
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Carte d'avis */
+.review-card {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation au survol de la carte d'avis */
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 153, 0.2);
+}
+
+/* Contenu de l'avis */
+.review-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.review-card .rating {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+/* Animation d'apparition des éléments */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Application de l'animation fadeInUp */
+.pricing-card, .review-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.review-card:nth-child(odd), .pricing-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.review-card:nth-child(even), .pricing-card:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+/* Footer */
+.footer {
+    background-color: #121212;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+.footer p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Styles de formulaire de commentaire */
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #00ff99;
+    outline: none;
+}
+
+/* Champs du formulaire */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #00ff99;
+    outline: none;
+}
+
+/* Animation d'entrée des sections */
+section {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.01);
+    opacity: 0.95;
+}

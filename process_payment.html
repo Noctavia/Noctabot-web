@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Processus de Paiement</title>
+
+    <style>
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background-color: #1e1e2f;
+
+            color: #fff;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+
+        .container {
+
+            max-width: 600px;
+
+            margin: 50px auto;
+
+            background-color: #28293e;
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+        }
+
+
+
+        h1 {
+
+            text-align: center;
+
+            font-size: 2rem;
+
+            color: #ff6f61;
+
+        }
+
+
+
+        form {
+
+            margin-top: 20px;
+
+        }
+
+
+
+        label {
+
+            display: block;
+
+            font-size: 1rem;
+
+            margin-bottom: 5px;
+
+            color: #ccc;
+
+        }
+
+
+
+        input, select, button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #444;
+
+            border-radius: 8px;
+
+            background: #333;
+
+            color: #fff;
+
+            font-size: 1rem;
+
+        }
+
+
+
+        button {
+
+            background: linear-gradient(90deg, #43d35e, #34a853);
+
+            border: none;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+
+
+        button:hover {
+
+            background: linear-gradient(90deg, #34a853, #43d35e);
+
+        }
+
+
+
+        .summary {
+
+            margin-bottom: 20px;
+
+            padding: 15px;
+
+            background-color: #1e1e2f;
+
+            border-radius: 8px;
+
+            border: 1px solid #444;
+
+        }
+
+
+
+        .summary h2 {
+
+            font-size: 1.5rem;
+
+            color: #43d35e;
+
+        }
+
+
+
+        .summary p {
+
+            font-size: 1rem;
+
+            color: #d3d3d3;
+
+        }
+
+
+
+        footer {
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 0.9rem;
+
+            color: #777;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Procéder au Paiement</h1>
+
+
+
+        <!-- Résumé du produit -->
+
+        <div class="summary">
+
+            <h2>Résumé du produit</h2>
+
+            <p><strong>Produit :</strong> Bot Gestion</p>
+
+            <p><strong>Plan sélectionné :</strong> 10,00 € / mois</p>
+
+        </div>
+
+
+
+        <!-- Formulaire de paiement -->
+
+        <form>
+
+            <label for="name">Nom complet</label>
+
+            <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+
+
+
+            <label for="email">Adresse e-mail</label>
+
+            <input type="email" id="email" name="email" placeholder="Entrez votre e-mail" required>
+
+
+
+            <label for="card-number">Numéro de carte (fictif)</label>
+
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9123 4567" maxlength="16" required>
+
+
+
+            <label for="expiration">Date d'expiration</label>
+
+            <input type="month" id="expiration" name="expiration" required>
+
+
+
+            <label for="cvc">Code CVC</label>
+
+            <input type="text" id="cvc" name="cvc" placeholder="123" maxlength="3" required>
+
+
+
+            <button type="button" onclick="alert('Paiement simulé avec succès !')">Confirmer le Paiement</button>
+            <a href="index.html">Retour à l'accueil</a>
+
+        </form>
+
+    </div>
+
+
+
+    <footer>
+
+        <p>© 2024 Votre Entreprise - Tous droits réservés.</p>
+
+    </footer>
+
+</body>
+
+</html>

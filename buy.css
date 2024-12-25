@@ -1,0 +1,213 @@
+/* Styles globaux */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #1e1e2f;
+
+    color: #fff;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+header {
+
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+
+
+header h1 {
+
+    font-size: 2rem;
+
+    margin: 0;
+
+}
+
+
+
+header p {
+
+    margin: 10px 0 0;
+
+    font-size: 1rem;
+
+}
+
+
+
+.container {
+
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    background: #28293e;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+.product-summary {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.product-summary img {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 8px;
+
+    object-fit: cover;
+
+}
+
+
+
+.product-details h2 {
+
+    font-size: 1.5rem;
+
+    color: #ff6f61;
+
+    margin: 0;
+
+}
+
+
+
+.product-details p {
+
+    font-size: 1rem;
+
+    margin: 5px 0;
+
+    color: #d3d3d3;
+
+}
+
+
+
+.product-details .price {
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    color: #43d35e;
+
+}
+
+
+
+form {
+
+    margin-top: 20px;
+
+}
+
+
+
+form label {
+
+    display: block;
+
+    font-size: 1rem;
+
+    margin-bottom: 5px;
+
+    color: #ccc;
+
+}
+
+
+
+form input, form select, form button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    font-size: 1rem;
+
+    border-radius: 8px;
+
+    border: 1px solid #444;
+
+    background: #333;
+
+    color: #fff;
+
+}
+
+
+
+form button {
+
+    background: linear-gradient(90deg, #43d35e, #34a853);
+
+    color: #fff;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+
+form button:hover {
+
+    background: linear-gradient(90deg, #34a853, #43d35e);
+
+}
+
+
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #111;
+
+    color: #777;
+
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status des services</title>
+    <link rel="stylesheet" href="status.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <h1>Status des Services</h1>
+        <p>Consulter l'état de chaque service associé.</p>
+    </header>
+    <main>
+        <section class="status-boxes">
+            <div class="container">
+                <!--Box d'autre services -->
+                <div class="status-box">
+                    <h2>Etat d'autre service</h2>
+                    <div class="service-status">
+                        <p><strong>Serveur Discord :</strong><span class="status-ok">OK</span></p>
+                        <p><strong>Base de données :</strong><span class="status-down">Hors lignes</span></p>
+                    </div>
+                </div>
+                <div class="status-box">
+                    <h2>Jours sans incident</h2>
+                    <div class="days-without-incident">
+                        <p><strong>Total des jours sans incident:</strong> <span class="highlight">1 jours</span></p>
+                        <p><strong>Dernier incident:</strong> <span class="highlight">24/12/2024</span></p>
+                        <p><strong>Historique des incidents:</strong></p>
+                        <ul>
+                            <li>24/12/2024 - Probleme de fichier</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="status-table">
+            <h2>Etat des Services</h2>
+            <table>
+                <thread>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Statut</th>
+                        <th>Dernière Vérification</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <td>Index</td>
+                        <td>Page d'accueil principale</td>
+                        <td class="status online">En ligne</td>
+                        <td>23/12/24 20:09</td>
+                    </tr>
+                    <tr>
+                        <td>Index</td>
+                        <td>Page pour l'achat des produits</td>
+                        <td class="status online">En ligne</td>
+                        <td>23/12/24 20:10</td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td>Formulaire de contact</td>
+                        <td class="status online">En ligne</td>
+                        <td>24/12/24 15:49</td>
+                    </tr>
+                    <tr>
+                        <td>Documentation</td>
+                        <td>page pour les commande et explication des bots</td>
+                        <td class="status maintenance">En maintenance</td>
+                        <td>23/12/24 20:14</td>
+                    </tr>
+                    <tr>
+                        <td>Noctavia</td>
+                        <td>Présentation</td>
+                        <td class="status online">En ligne</td>
+                        <td>23/12/24 20:45</td>
+                    </tr>
+                    <tr>
+                        <td>Product</td>
+                        <td>Liste des produits</td>
+                        <td class="status online">En ligne</td>
+                        <td>24/12/24 20:06</td>
+                    </tr>
+                    <tr>
+                        <td>Review</td>
+                        <td>Avis et retours clients</td>
+                        <td class="status online">En ligne</td>
+                        <td>23/12/24 20:18</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>page status elle-même</td>
+                        <td class="status online">En ligne</td>
+                        <td>23/12/24 20:19</td>
+                    </tr>
+                    <tr>
+                        <td>buy</td>
+                        <td>page pour acheter</td>
+                        <td class="status online">En ligne</td>
+                        <td>23/12/24 12:00</td>
+                    </tr>
+                    <tr>
+                        <td>login</td>
+                        <td>pour ce connecter</td>
+                        <td class="status maintenance">En maintenance</td>
+                        <td>23/12/24 20:45</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy 2024 Nocta Bot - Tous droits réservés</p>
+    </footer>
+    
+    <script src="status.js"></script>
+</body>
+</html>

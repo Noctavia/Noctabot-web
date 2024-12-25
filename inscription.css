@@ -1,0 +1,171 @@
+/* Section d'inscription */
+.signup-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 70vh;
+}
+
+.signup-container {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.signup-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #28a745;
+    outline: none;
+    background-color: #f7f7f7;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Options supplémentaires sous le formulaire */
+.signup-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+}
+
+.terms input {
+    margin-right: 5px;
+}
+
+.terms a {
+    color: #007bff;
+}
+
+.submit-button button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button button:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+.submit-button button:active {
+    background-color: #1e7e34;
+    transform: translateY(1px);
+}
+
+/* Lien de connexion */
+.login-link {
+    margin-top: 20px;
+}
+
+.login-link p {
+    font-size: 1em;
+    color: #555;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 50px;
+}
+
+.footer p {
+    color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 30px;
+        width: 80%;
+        max-width: 350px;
+    }
+
+    .signup-form h2 {
+        font-size: 2em;
+    }
+
+    .submit-button button {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px;
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .signup-form h2 {
+        font-size: 1.8em;
+    }
+
+    .submit-button button {
+        font-size: 1.1em;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .input-group input {
+        font-size: 1em;
+    }
+}

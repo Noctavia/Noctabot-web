@@ -1,0 +1,444 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d1117;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Barre de navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #161b22;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4caf50;
+    cursor: pointer;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header .logo span {
+    color: #58a6ff;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: #4caf50;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Bouton login */
+header .btn-login {
+    background: #21262d;
+    color: #fff;
+    padding: 10px 25px;
+    border: 2px solid #4caf50;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+header .btn-login:hover {
+    background: #4caf50;
+    color: #000;
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Animations Globales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Section Héros */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4caf50, #58a6ff);
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content {
+    max-width: 50%;
+    animation: slideInLeft 2s ease-out;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content .btn {
+    background: #fff;
+    color: #4caf50;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .btn:hover {
+    transform: scale(1.1);
+    background: #4caf50;
+    color: #fff;
+    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.8);
+}
+
+.hero-image img {
+    width: 90%;
+    animation: zoomIn 1.5s ease-out;
+    border-radius: 20px;
+}
+
+/* Animations de Section */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Section Statistiques */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background: #161b22;
+    animation: pulse 3s infinite;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite;
+}
+
+.stat-item p {
+    color: #aaa;
+}
+
+/* Avis des utilisateurs */
+.reviews {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #0d1117, #161b22);
+}
+
+.reviews h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #4caf50;
+    animation: float 3s infinite;
+}
+
+.review-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-item {
+    background: #21262d;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 255, 150, 0.8);
+}
+
+.review-item p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.review-item span {
+    font-size: 0.8rem;
+    color: #58a6ff;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #58a6ff;
+}
+
+* Effet barre de progression dans le header */
+header::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(to right, #4caf50, #58a6ff);
+    z-index: 1001;
+    transition: width 0.2s ease;
+}
+
+body.scrolled header::after {
+    width: 100%;
+}
+
+/* Effet 3D sur les boutons */
+.btn {
+    position: relative;
+    background: linear-gradient(to bottom right, #4caf50, #58a6ff);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 255, 150, 0.6);
+}
+
+/* Animation d'entrée des cartes */
+.card {
+    background: #21262d;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 255, 150, 0.8);
+}
+
+/* Glitch visuel */
+.card::before, .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+    animation: glitch 0.7s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: translate(0);
+    }
+    33% {
+        transform: translate(-5px, 5px);
+    }
+    66% {
+        transform: translate(5px, -5px);
+    }
+}
+
+/* Avis avec carrousel */
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    overflow: hidden;
+}
+
+.review-list {
+    display: flex;
+    gap: 20px;
+    animation: scrollReviews 10s linear infinite;
+}
+
+@keyframes scrollReviews {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Styles avancés pour étoiles de notation */
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.rating span {
+    font-size: 1.2rem;
+    color: #4caf50;
+    animation: pulse 1s infinite alternate;
+}
+
+/* Design mobile */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .review-list {
+        flex-direction: column;
+    }
+}
+
+/* Effet lumière sur le logo */
+header .logo {
+    position: relative;
+    display: inline-block;
+    color: #4caf50;
+    text-shadow: 0 0 5px #4caf50, 0 0 10px #4caf50, 0 0 15px #4caf50;
+    animation: glowing 2s infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px #4caf50, 0 0 10px #4caf50, 0 0 15px #4caf50, 0 0 20px #4caf50;
+    }
+    100% {
+        text-shadow: 0 0 20px #58a6ff, 0 0 30px #58a6ff, 0 0 40px #58a6ff;
+    }
+}

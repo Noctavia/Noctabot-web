@@ -1,0 +1,946 @@
+/* Reset de base pour éviter les problèmes de marge et de padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du corps */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style de l'en-tête */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1em;
+}
+
+/* Section de revue */
+.reviews-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+/* Conteneur des revues */
+.review-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Formulaire de revue */
+.review-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.review-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.review-rating {
+    margin-bottom: 15px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 2em;
+    color: #ddd;
+}
+
+.star.filled {
+    color: #ffd700;
+}
+
+.review-input,
+.review-author {
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Liste des avis */
+.reviews-list h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.review-date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.review-rating {
+    margin-bottom: 15px;
+}
+
+.review-rating .star {
+    font-size: 1.5em;
+    color: #ddd;
+}
+
+.review-rating .star.filled {
+    color: #ffd700;
+}
+
+.review-text p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 1em;
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+    .review-container {
+        width: 95%;
+    }
+
+    .review-form h2 {
+        font-size: 1.3em;
+    }
+
+    .submit-button button {
+        font-size: 1em;
+    }
+
+    .review-item {
+        padding: 15px;
+    }
+
+    .review-author {
+        font-size: 1.1em;
+    }
+
+    .review-text p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.6em;
+    }
+
+    .review-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .review-form h2 {
+        font-size: 1.2em;
+    }
+
+    .submit-button button {
+        font-size: 1em;
+    }
+
+    .review-item {
+        padding: 10px;
+    }
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+.header {
+    background-color: #0069d9;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2em;
+}
+
+/* Section des revues */
+.reviews-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+/* Conteneur des revues */
+.review-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* Formulaire d'ajout d'avis */
+.review-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.review-form h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review-form .review-rating {
+    margin-bottom: 20px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 2.5em;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.star.filled {
+    color: #ffd700;
+}
+
+.star:hover,
+.star-rating:hover .star {
+    color: #f39c12;
+}
+
+/* Effet dynamique de la soumission d'avis */
+.submit-button button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.submit-button button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.submit-button button:active {
+    transform: scale(0.98);
+}
+
+.submit-button button:focus {
+    outline: none;
+}
+
+/* Champs de texte */
+textarea,
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #f7f7f7;
+}
+
+textarea:focus,
+input[type="text"]:focus {
+    border-color: #28a745;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Liste des avis */
+.reviews-list h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #444;
+}
+
+.review-date {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.review-rating {
+    margin-bottom: 15px;
+}
+
+.review-rating .star {
+    font-size: 1.8em;
+    color: #ddd;
+}
+
+.review-rating .star.filled {
+    color: #ffd700;
+}
+
+.review-text p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Animation pour l'apparition des avis */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-item {
+    animation: fadeIn 1s ease-out;
+}
+
+.review-item:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+.review-item:nth-child(even) {
+    animation-delay: 0.6s;
+}
+
+/* Footer */
+.footer {
+    background-color: #0069d9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-container {
+        width: 95%;
+    }
+
+    .review-form h2 {
+        font-size: 1.4em;
+    }
+
+    .review-rating {
+        margin-bottom: 15px;
+    }
+
+    .submit-button button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .review-item {
+        padding: 15px;
+    }
+
+    .review-author {
+        font-size: 1em;
+    }
+
+    .review-rating .star {
+        font-size: 1.5em;
+    }
+
+    .review-text p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .review-form h2 {
+        font-size: 1.2em;
+    }
+
+    .review-item {
+        padding: 10px;
+    }
+
+    .review-rating .star {
+        font-size: 1.4em;
+    }
+
+    .submit-button button {
+        font-size: 1em;
+    }
+
+    .review-author {
+        font-size: 0.9em;
+    }
+
+    .review-text p {
+        font-size: 0.95em;
+    }
+}
+
+/* Toast Notifications */
+.review-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.review-notification.error {
+    background-color: #dc3545;
+}
+
+.review-notification.info {
+    background-color: #17a2b8;
+}
+
+.review-notification .close-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.review-notification .close-btn:hover {
+    color: #ffc107;
+}
+
+/* Modal Window (for confirmation after review submission) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content h2 {
+    font-size: 1.5em;
+}
+
+.modal-content p {
+    font-size: 1em;
+}
+
+.modal .modal-close {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal .modal-close:hover {
+    background-color: #c82333;
+}
+
+/* Button to open modal */
+.open-modal-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Animations supplémentaires pour améliorer l'expérience utilisateur */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Application de l'animation sur le formulaire de soumission d'avis */
+.review-form {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Animation de texte pour les avis */
+.review-text p {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.review-item:hover .review-text p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Ajouter un effet de survol sur la note des étoiles */
+.star-rating .star {
+    transition: transform 0.3s ease;
+}
+
+.star-rating .star:hover {
+    transform: scale(1.2);
+}
+
+/* Animation de l'affichage des avis */
+.review-item {
+    animation: fadeIn 1s ease-out;
+    transform: translateY(20px);
+}
+
+.review-item:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.review-item:nth-child(even) {
+    animation-delay: 0.5s;
+}
+
+/* Amélioration du bouton de soumission avec animation */
+.submit-button button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+.submit-button button:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button button:active {
+    background-color: #1e7e34;
+    transform: translateY(1px);
+}
+
+/* Boutons de modale */
+.modal .modal-close {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal .modal-close:hover {
+    background-color: #c82333;
+}
+
+/* Style du toast notification */
+.review-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.review-notification.error {
+    background-color: #dc3545;
+}
+
+.review-notification.info {
+    background-color: #17a2b8;
+}
+
+.review-notification .close-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.review-notification .close-btn:hover {
+    color: #ffc107;
+}
+
+/* Animation pour la notification qui s'affiche */
+@keyframes toastFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Affichage des notifications toast */
+.review-notification.show {
+    animation: toastFadeIn 0.6s ease-out;
+}
+
+/* Effet de survol pour les éléments de liste d'avis */
+.review-item:hover {
+    background-color: #fafafa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Amélioration des étoiles de la notation */
+.star-rating .star {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.star-rating .star:hover,
+.star-rating .star.filled:hover {
+    transform: scale(1.3);
+    color: #ffeb3b;
+}
+
+/* Animation pour le changement de la couleur des étoiles */
+.star-rating .star {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Résultats de la recherche des avis */
+.search-bar {
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Animation d'apparition du bouton "Voir plus" */
+.load-more-btn {
+    background-color: #0069d9;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.load-more-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.load-more-btn:active {
+    background-color: #004085;
+    transform: translateY(1px);
+}
+
+/* Amélioration du formulaire avec focus et transition */
+textarea,
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+textarea:focus,
+input[type="text"]:focus {
+    border-color: #28a745;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Style général pour les éléments de texte */
+p,
+h1,
+h2,
+h3 {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+/* Animation de fade pour les titres */
+h1, h2, h3 {
+    animation: fadeIn 1s ease-out;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Accès rapide aux éléments pour les écrans larges */
+@media (min-width: 1200px) {
+    .review-container {
+        width: 85%;
+    }
+
+    .review-form h2 {
+        font-size: 1.8em;
+    }
+
+    .submit-button button {
+        font-size: 1.3em;
+    }
+
+    .review-item {
+        padding: 25px;
+    }
+}
+
+/* Mode sombre */
+body[data-theme="dark"] {
+    background-color: #181818;
+    color: #e4e4e4;
+}
+
+body[data-theme="dark"] .header {
+    background-color: #333;
+}
+
+body[data-theme="dark"] .review-form {
+    background-color: #222;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .review-item {
+    background-color: #2a2a2a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+body[data-theme="dark"] .submit-button button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+body[data-theme="dark"] .submit-button button:hover {
+    background-color: #218838;
+}
+
+body[data-theme="dark"] .footer {
+    background-color: #333;
+}
+
+/* Gestion de l'état "dark mode" avec un bouton toggle */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #0056b3;
+}
