@@ -1,0 +1,208 @@
+/* Variables principales */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #58a6ff;
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --text-muted: #b3b3b3;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    --transition-speed: 0.4s;
+    --neon-color: #58a6ff;
+    --glow-color: rgba(72, 239, 128, 0.5);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2d2d2d, #000);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: background-fade 8s infinite alternate;
+}
+
+/* Animation du fond */
+@keyframes background-fade {
+    0% {
+        background: linear-gradient(135deg, #1c1c1c, #000);
+    }
+    50% {
+        background: linear-gradient(135deg, #2d2d2d, #0a0a0a);
+    }
+    100% {
+        background: linear-gradient(135deg, #1c1c1c, #000);
+    }
+}
+
+/* Conteneur principal */
+.hidden {
+    display: none;
+}
+
+.login-container,
+.profile-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Boîtes */
+.login-box,
+.profile-box {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-box::before,
+.profile-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, transparent, var(--neon-color));
+    filter: blur(50px);
+    animation: rotate 10s infinite linear;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.login-box h2,
+.profile-box h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--glow-color);
+}
+
+/* Champs d'entrée */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: #2a2a2a;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: box-shadow var(--transition-speed);
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 15px var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+/* Boutons */
+.btn {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+    box-shadow: 0 4px 15px var(--glow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--glow-color);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: btn-glow 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes btn-glow {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Profil */
+.profile-details label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+.profile-details input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    background: #2a2a2a;
+    color: var(--text-color);
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+.logout {
+    margin-top: 20px;
+    background: #e63946;
+    transition: background var(--transition-speed);
+}
+
+.logout:hover {
+    background: #d90429;
+}
