@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+    <!-- Bouton pour activer/désactiver le mode sombre -->
+    <button id="darkModeButton" class="dark-mode-toggle">🌙</button>
+
+    <!-- Section d'accueil (présentation) -->
+    <header class="intro">
+        <h1>Bonjour, je suis Noctavia</h1>
+        <p>Développeur Web Passionné | Langages utilisés : HTML, CSS, JavaScript, PHP, c#, Python.</p>
+    </header>
+
+    <!-- Section À propos -->
+    <section class="about" id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis un développeur web passionné par la création de sites et d'applications interactives. J'aime résoudre des problèmes complexes en utilisant des technologies modernes.</p>
+    </section>
+
+<!-- Section Compétences -->
+<section class="skills" id="skills">
+    <h2>Compétences</h2>
+    <div class="skill-container">
+        <!-- Compétence 1 : HTML -->
+        <div class="skill">
+            <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+            </div>
+            <div class="skill-info">
+                <h3>HTML</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-bar html" data-skill="90%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 2 : CSS -->
+        <div class="skill">
+            <div class="skill-icon">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="skill-info">
+                <h3>CSS</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-bar css" data-skill="90%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 3 : JavaScript -->
+        <div class="skill">
+            <div class="skill-icon">
+                <i class="fab fa-js"></i>
+            </div>
+            <div class="skill-info">
+                <h3>JavaScript</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-bar js" data-skill="70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 4 : PHP -->
+        <div class="skill">
+            <div class="skill-icon">
+                <i class="fab fa-php"></i>
+            </div>
+            <div class="skill-info">
+                <h3>PHP</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-bar php" data-skill="70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 5 : C# -->
+        <div class="skill">
+            <div class="skill-icon">
+                <i class="fab fa-microsoft"></i>
+            </div>
+            <div class="skill-info">
+                <h3>C#</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-bar csharp" data-skill="70%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétence 6 : Python -->
+        <div class="skill">
+            <div class="skill-icon">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="skill-info">
+                <h3>Python</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-bar python" data-skill="40%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Section Projets -->
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="project-grid">
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project1.jpg" alt="Projet 1">
+                </div>
+                <div class="project-details">
+                    <h3>text war</h3>
+                    <p>Un site ou tu peux ecrire ce que tu veux, il n'y a aucune regle.</p>
+                    <p><strong>Technologies :</strong> HTML, CSS, JS</p>
+                    <a href="#" class="btn">Voir le projet</a>
+                </div>
+            </div>
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project2.jpg" alt="Projet 2">
+                </div>
+                <div class="project-details">
+                    <h3>Site internet</h3>
+                    <p>Juste pour mon serv discord</p>
+                    <p><strong>Technologies :</strong> PHP, MySQL</p>
+                    <a href="https://noctavia.github.io/Noctabot-web/" class="btn">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Restons en contact !</h3>
+                <p>Pour toute question, collaboration ou opportunité, envoyez-moi un message directement.</p>
+                <ul>
+                    <li><strong>Email :</strong> vearathenicofrance@gmail.com</li>
+                </ul>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/vearathenicofrance@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Noctavia. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Inclusion du script JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
