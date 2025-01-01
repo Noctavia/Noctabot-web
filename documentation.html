@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Balises méta principales -->
+  <title>Noctav Bot</title>
+  <meta name="title" content="Le Bot Discord Parfait">
+  <meta name="description" content="Noctav Bot, le seul bot Discord dont vous aurez besoin.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="logo.png" type="svg+xml">
+
+  <!-- Lien CSS -->
+  <link rel="stylesheet" href="doc.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Préchargement d'images -->
+  <link rel="preload" as="image" href="logo.png">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <h1 style="color:#FFFFFF;">Noctav Bot</h1>
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <h2>Noctav Bot</h2>
+          </a>
+          <button class="nav-close-btn" aria-label="fermer le menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="#" class="navbar-link">Accueil</a></li>
+          <li><a href="#service" class="navbar-link">Services</a></li>
+          <li><a href="#stat" class="navbar-link">Statistiques</a></li>
+          <li><a href="#feature" class="navbar-link">Fonctionnalités</a></li>
+          <li><a href="/server" class="navbar-link">Serveur</a></li>
+        </ul>
+      </nav>
+
+      <div class="btn-group">
+        <a href="https://discord.com/oauth2/authorize?client_id=1096846617522471052&permissions=8&integration_type=0&scope=bot" class="btn btn-primary">Inviter le bot</a>
+      </div>
+
+      <button class="nav-open-btn" aria-label="ouvrir le menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <article>
+      <!-- SECTION HERO -->
+      <section class="hero" aria-label="home">
+        <div class="container">
+          <div class="hero-banner">
+            <figure class="hero-banner">
+              <img src="logo.png" width="799" height="823" alt="Illustration du bot" class="w-100">
+            </figure>
+          </div>
+          <div class="hero-content">
+            <h1 class="h1 hero-title">Le Bot Discord Parfait</h1>
+            <p class="hero-text">
+              Nocta est le seul bot Discord dont vous aurez besoin. Il contient des fonctionnalités puissantes pour gérer votre serveur Discord.
+            </p>
+            <div class="btn-group">
+              <a href="https://discord.com/oauth2/authorize?client_id=1096846617522471052&permissions=8&integration_type=0&scope=bot" class="btn btn-primary">Inviter le bot</a>
+              <a href="/server" class="play-btn">
+                <div class="icon">
+                  <ion-icon name="logo-discord" aria-hidden="true"></ion-icon>
+                </div>
+                <span class="span">Serveur de support</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION SERVICES -->
+      <section class="section promo" aria-label="promo" id="service">
+        <div class="container">
+          <h2 class="h2 section-title text-center">Que propose le bot ?</h2>
+          <p class="section-text text-center">
+            NoctaBot respecte toutes les conditions d'utilisation de Discord.
+          </p>
+
+          <ul class="grid-list">
+            <li>
+              <div class="promo-card bg-gray">
+                <div class="card-icon">
+                  <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="h3 card-title">Commandes Slash</h3>
+                <p class="card-text">
+                  Toutes les commandes du bot utilisent le système "/".
+                </p>
+                <a href="https://discord.com/blog/slash-commands-are-here" class="btn-link">
+                  <span class="span">En savoir plus</span>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="promo-card bg-gray">
+                <div class="card-icon">
+                  <ion-icon name="cog-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="h3 card-title">Boutons Discord</h3>
+                <p class="card-text">
+                  Des boutons interactifs pour rendre le bot plus facile à utiliser.
+                </p>
+                <a href="https://discordjs.guide/interactions/buttons.html#building-and-sending-buttons" class="btn-link">
+                  <span class="span">En savoir plus</span>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="promo-card bg-gray">
+                <div class="card-icon">
+                  <ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h3 class="h3 card-title">Sécurité Fiable</h3>
+                <p class="card-text">
+                  Toutes les données des utilisateurs sont stockées en toute sécurité.
+                </p>
+                <a href="https://www.mongodb.com/" class="btn-link">
+                  <span class="span">En savoir plus</span>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION STATISTIQUES -->
+      <section class="stats" aria-label="statistiques" id="stat">
+        <div class="container">
+          <h2 class="h2 section-title">Une couverture mondiale</h2>
+          <p class="section-text">
+            Merci à tous les serveurs et utilisateurs qui utilisent Recluse.
+          </p>
+          <ul class="stats-list">
+            <li>
+              <div class="stats-card bg-gray">
+                <h3 class="h3 card-title">1k+</h3>
+                <p class="card-text">Utilisateurs</p>
+              </div>
+            </li>
+            <li>
+              <div class="stats-card bg-gray">
+                <h3 class="h3 card-title">32</h3>
+                <p class="card-text">Serveurs</p>
+              </div>
+            </li>
+            <li>
+              <div class="stats-card bg-gray">
+                <h3 class="h3 card-title">500</h3>
+                <p class="card-text">Votes</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <div class="footer-bottom">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="stats-banner.png" alt="Logo Recluse Bot" width="100" height="auto">
+      </a>
+      <p class="copyright">
+        Copyright Recluse Bot 2025. Tous droits réservés.
+      </p>
+  
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Support</a></li>
+          <li><a href="#" class="footer-bottom-link">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="doc.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
