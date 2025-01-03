@@ -1,48 +1,47 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    text-align: center;
+.logo img {
+    width: 100px;
+    margin-top: 20px;
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    font-size: 16px;
 }
 
-.links {
+.button-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-}
-
-.white-box {
-    display: block;
-    width: 150px;
-    height: 150px;
-    background-color: #fff;
-    color: #333;
-    text-decoration: none;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    border: 2px solid #ddd;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-
+    gap: 15px;
+    margin-top: 30px;
 }
 
-.white-box:hover  {
-    transform: scale(1.1);
-    background-color: #e6e6e6;
-    border-color: #bbb;
+.button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 150px;
 }
+
+.button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+

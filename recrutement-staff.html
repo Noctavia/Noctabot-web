@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutement Staff</title>
+    <link rel="stylesheet" href="recrutement-staff.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire de Recrutement Staff</h1>
+        <form id="recruitmentForm" method="POST" action="recrutement.php">
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+            <label for="presentation">Présentation rapide :</label>
+            <textarea id="presentation" name="presentation" rows="4" placeholder="Présentez-vous brièvement" required></textarea>
+
+            <label for="discord">Pseudo Discord :</label>
+            <input type="text" id="discord" name="discord" placeholder="Exemple : Pseudo#1234" required>
+
+            <label for="availability">Horaires / Disponibilités :</label>
+            <textarea id="availability" name="availability" rows="3" placeholder="Vos horaires en semaine et week-end" required></textarea>
+
+            <label for="motivation">Motivation pour rejoindre l'équipe :</label>
+            <textarea id="motivation" name="motivation" rows="4" placeholder="Pourquoi souhaitez-vous rejoindre ?" required></textarea>
+
+            <label for="whyYou">Pourquoi vous et pas un autre ?</label>
+            <textarea id="whyYou" name="whyYou" rows="4" placeholder="Expliquez ce qui vous rend unique" required></textarea>
+
+            <label for="experience">Expériences en dev et modération (détailler) :</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="Décrivez vos expériences en détail" required></textarea>
+
+            <label for="contribution">Qu'est-ce que vous pouvez rapporter sur le serveur Discord ?</label>
+            <textarea id="contribution" name="contribution" rows="4" placeholder="Votre contribution au serveur" required></textarea>
+
+            <label for="qualities">Citez 3 qualités :</label>
+            <input type="text" id="qualities" name="qualities" placeholder="Qualités, séparées par des virgules" required>
+
+            <label for="flaws">Citez 3 défauts :</label>
+            <input type="text" id="flaws" name="flaws" placeholder="Défauts, séparés par des virgules" required>
+
+            <button type="submit">Soumettre</button>
+        </form>
+        <footer>© 2025 - Tous droits réservés</footer>
+    </div>
+</body>
+</html>
