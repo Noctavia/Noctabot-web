@@ -3,127 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Status des services</title>
-    <link rel="stylesheet" href="status.css">
+    <title>Statistiques des Sites - Gestion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-mode {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .toggle-theme {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .toggle-theme button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-theme button:hover {
+            background-color: #3a943d;
+        }
+        .box {
+            display: inline-block;
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .box {
+            background-color: #1e1e1e;
+            color: #ccc;
+        }
+        .box h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .box p {
+            font-size: 16px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .dark-mode .card {
+            background-color: #1e1e1e;
+            color: #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .dark-mode th {
+            background-color: #2a922d;
+        }
+        .progress-container {
+            margin-top: 20px;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            height: 20px;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+            font-weight: bold;
+        }
+        .progress-bar.offline span {
+            background-color: #dc3545;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <img src="logo.png" alt="Logo" class="logo">
+<body class="light-mode">
+    <div class="container">
+        <h1>Statistiques et Statut des Sites</h1>
+
+        <!-- Theme toggle -->
+        <div class="toggle-theme">
+            <button id="theme-toggle">Passer en mode sombre</button>
         </div>
-        <h1>Status des Services</h1>
-        <p>Consulter l'état de chaque service associé.</p>
-    </header>
-    <main>
-        <section class="status-boxes">
-            <div class="container">
-                <!--Box d'autre services -->
-                <div class="status-box">
-                    <h2>Etat d'autre service</h2>
-                    <div class="service-status">
-                        <p><strong>Serveur Discord :</strong><span class="status-ok">OK</span></p>
-                        <p><strong>Base de données :</strong><span class="status-down">Hors lignes</span></p>
-                    </div>
-                </div>
-                <div class="status-box">
-                    <h2>Jours sans incident</h2>
-                    <div class="days-without-incident">
-                        <p><strong>Total des jours sans incident:</strong> <span class="highlight">1 jours</span></p>
-                        <p><strong>Dernier incident:</strong> <span class="highlight">24/12/2024</span></p>
-                        <p><strong>Historique des incidents:</strong></p>
-                        <ul>
-                            <li>24/12/2024 - Probleme de fichier</li>
-                            <li>25/12/2024 - Probleme avec l'extention php</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="status-table">
-            <h2>Etat des Services</h2>
-            <table>
-                <thread>
+
+        <!-- Boxes for site statistics -->
+        <div class="box" id="box-availability">
+            <h3>Disponibilité des Sites</h3>
+            <p id="availability-status">En cours...</p>
+        </div>
+
+        <div class="box" id="box-maintenance">
+            <h3>Dernière Maintenance</h3>
+            <p id="maintenance-status">Aucune maintenance récente</p>
+        </div>
+
+        <div class="box" id="box-no-incident">
+            <h3>Sites sans Incident</h3>
+            <p id="no-incident-status">Aucun incident</p>
+        </div>
+
+        <!-- Table for detailed site info -->
+        <div class="card">
+            <h2>Détails des Sites</h2>
+            <table id="site-details">
+                <thead>
                     <tr>
-                        <th>Service</th>
-                        <th>Description</th>
+                        <th>Nom du site</th>
+                        <th>URL</th>
                         <th>Statut</th>
-                        <th>Dernière Vérification</th>
+                        <th>Disponibilité (%)</th>
                     </tr>
-                </thread>
+                </thead>
                 <tbody>
-                    <tr>
-                        <td>Index</td>
-                        <td>Page d'accueil principale</td>
-                        <td class="status online">En ligne</td>
-                        <td>23/12/24 20:09</td>
-                    </tr>
-                    <tr>
-                        <td>Index</td>
-                        <td>Page pour l'achat des produits</td>
-                        <td class="status online">En ligne</td>
-                        <td>23/12/24 20:10</td>
-                    </tr>
-                    <tr>
-                        <td>Contact</td>
-                        <td>Formulaire de contact</td>
-                        <td class="status online">En ligne</td>
-                        <td>24/12/24 15:49</td>
-                    </tr>
-                    <tr>
-                        <td>Documentation</td>
-                        <td>page pour les commande et explication des bots</td>
-                        <td class="status online">En ligne</td>
-                        <td>01/01/25 12:29</td>
-                    </tr>
-                    <tr>
-                        <td>Noctavia</td>
-                        <td>Présentation</td>
-                        <td class="status online">En ligne</td>
-                        <td>23/12/24 20:45</td>
-                    </tr>
-                    <tr>
-                        <td>Product</td>
-                        <td>Liste des produits</td>
-                        <td class="status online">En ligne</td>
-                        <td>24/12/24 20:06</td>
-                    </tr>
-                    <tr>
-                        <td>Review</td>
-                        <td>Avis et retours clients</td>
-                        <td class="status online">En ligne</td>
-                        <td>23/12/24 20:18</td>
-                    </tr>
-                    <tr>
-                        <td>Status</td>
-                        <td>page status elle-même</td>
-                        <td class="status online">En ligne</td>
-                        <td>23/12/24 20:19</td>
-                    </tr>
-                    <tr>
-                        <td>buy</td>
-                        <td>page pour acheter</td>
-                        <td class="status online">En ligne</td>
-                        <td>23/12/24 12:00</td>
-                    </tr>
-                    <tr>
-                        <td>login</td>
-                        <td>pour ce connecter</td>
-                        <td class="status maintenance">En maintenance</td>
-                        <td>23/12/24 20:45</td>
-                    </tr>
-                    <tr>
-                        <td>presentaiton</td>
-                        <td>Page de presentation</td>
-                        <td class="status online">En ligne</td>
-                        <td>28/12/24 16:8</td>
+                    <!-- Sites will be added here -->
                 </tbody>
             </table>
-        </section>
-    </main>
-    <footer>
-        <p>&copy 2024 Nocta Bot - Tous droits réservés</p>
-    </footer>
-    
-    <script src="status.js"></script>
+        </div>
+    </div>
+
+    <script>
+        const sites = [
+            { name: "Site Achat 1", url: "https://noctavia.github.io/Noctabot-web/acheter.html", status: "Disponible", availability: 98, lastMaintenance: "2025-01-01", incidents: 0 },
+            { name: "Site Achat 2", url: "https://noctavia.github.io/Noctabot-web/products.html", status: "Disponible", availability: 90, lastMaintenance: "2024-12-29", incidents: 1 },
+            { name: "Site Principal", url: "https://noctavia.github.io/Noctabot-web/", status: "Disponible", availability: 95, lastMaintenance: "2024-12-30", incidents: 0 },
+            { name: "Site Présentation 1", url: "https://noctavia.github.io/Noctabot-web/presentation.html", status: "Disponible", availability: 97, lastMaintenance: "2025-01-05", incidents: 0 },
+            { name: "Staff", url: "https://noctavia.github.io/Noctabot-web/recrutement-staff.html", status: "Disponible", availability: 99, lastMaintenance: "2025-01-03", incidents: 0 },
+            { name: "Forum", url: "https://noctavia.github.io/Noctabot-web/documentation.html", status: "Disponible", availability: 100, lastMaintenance: "2024-12-20", incidents: 2 }
+        ];
+
+        // Webhook Discord URL
+        const discordWebhookUrl = "https://discord.com/api/webhooks/1325557293324173404/KgGaZYgn2UdKJSruMQgWJZes5jkw8jiqi0NZcvnIWEWXEfQQSkLAnsy5A5tM6lKLYSJB";
+
+        function updateStatistics() {
+            const availableSites = sites.filter(site => site.status === "Disponible").length;
+            const offlineSites = sites.filter(site => site.status === "Hors-ligne").length;
+            const sitesWithoutIncidents = sites.filter(site => site.incidents === 0).length;
+            const lastMaintenance = sites.map(site => site.lastMaintenance).sort().reverse()[0]; // Get most recent maintenance
+
+            // Update Availability box
+            document.getElementById("availability-status").textContent = `Sites disponibles: ${availableSites}, Hors-ligne: ${offlineSites}`;
+
+            // Update Maintenance box
+            document.getElementById("maintenance-status").textContent = `Dernière maintenance: ${lastMaintenance}`;
+
+            // Update No Incident box
+            document.getElementById("no-incident-status").textContent = `Sites sans incident: ${sitesWithoutIncidents}`;
+
+            // Update Table
+            const tableBody = document.getElementById("site-details").getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '';
+            sites.forEach(site => {
+                const row = tableBody.insertRow();
+                row.innerHTML = `
+                    <td>${site.name}</td>
+                    <td><a href="${site.url}" target="_blank">${site.url}</a></td>
+                    <td class="status">${site.status}</td>
+                    <td>${site.availability}%</td>
+                `;
+            });
+
+            // Send Discord Webhook
+            sendToDiscord();
+        }
+
+        // Send statistics to Discord Webhook
+        function sendToDiscord() {
+            const data = {
+                username: "Site Stats Bot",
+                embeds: [{
+                    title: "Statistiques des Sites",
+                    description: "Voici les dernières statistiques des sites suivis.",
+                    fields: sites.map(site => ({
+                        name: `${site.name} - ${site.status}`,
+                        value: `
+                            **Disponibilité:** ${site.availability}% 
+                            **Dernière Maintenance:** ${site.lastMaintenance} 
+                            **Incidents:** ${site.incidents === 0 ? 'Aucun' : site.incidents}
+                        `,
+                        inline: true
+                    }))
+                }]
+            };
+
+            fetch(discordWebhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+        }
+
+        // Function for theme toggle
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            const body = document.body;
+            const button = document.getElementById("theme-toggle");
+
+            if (body.classList.contains("light-mode")) {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                button.textContent = "Passer en mode clair";
+            } else {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                button.textContent = "Passer en mode sombre";
+            }
+        });
+
+        // Run initial statistics update
+        updateStatistics();
+    </script>
 </body>
 </html>
